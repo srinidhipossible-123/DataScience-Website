@@ -211,7 +211,7 @@ body {
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 6rem;
   margin-bottom: 15px;
 }
 
@@ -1259,7 +1259,6 @@ body {
 .social-links a {
     width: 40px;
     height: 40px;
-    background: #D4AF37;
     color: #8B4513;
     border-radius: 50%;
     display: flex;
@@ -1940,4 +1939,46 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #B8941F;
+}
+
+.recruiters-slider {
+  overflow: hidden;
+  background: #f9f9f9;
+  padding: auto 0;
+}
+
+.slider-track {
+  display: flex;
+  animation: scroll 25s linear infinite;
+}
+
+.recruiter-slide {
+  flex: 0 0 auto;
+  width: 180px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.recruiter-slide img {
+  width: 100px;
+  margin-bottom: auto;
+  transition: transform 0.3s, filter 0.3s;
+  filter: grayscale(20%);
+}
+
+.recruiter-slide:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.recruiter-slide span {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
